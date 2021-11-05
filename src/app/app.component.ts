@@ -17,7 +17,11 @@ export class AppComponent {
       this.reset();
       this.isNeedToRest = false;
     }
-    this.display += value;
+    if (value === '.') {
+      this.writeDot();
+    } else {
+      this.display += value;
+    }
   }
 
   minus(): void {
@@ -51,5 +55,13 @@ export class AppComponent {
     this.num1 = '';
     this.num2 = '';
     this.display = '';
+  }
+
+  writeDot(): void {
+    if (this.display.includes('.')) {
+      return;
+    }
+
+    this.display += '.';
   }
 }

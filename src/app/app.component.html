@@ -1,33 +1,62 @@
-<input [ngModel]="display" disabled>
-<table>
-  <tr>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-  <tr>
-    <td><button (click)="addNumber('1')">1</button></td>
-    <td><button (click)="addNumber('2')">2</button></td>
-    <td><button (click)="addNumber('3')">3</button></td>
-    <td><button (click)="add()">+</button></td>
-  </tr>
-  <tr>
-    <td><button (click)="addNumber('4')">4</button></td>
-    <td><button (click)="addNumber('5')">5</button></td>
-    <td><button (click)="addNumber('6')">6</button></td>
-    <td><button (click)="minus()">-</button></td>
-  </tr>
-  <tr>
-    <td><button (click)="addNumber('7')">7</button></td>
-    <td><button (click)="addNumber('8')">8</button></td>
-    <td><button (click)="addNumber('9')">9</button></td>
-    <td><button (click)="reset()">Reset</button></td>    
-  </tr>
-  <tr>
-    <td><button (click)="calc()">=</button></td>
-    <td><button (click)="addNumber('0')">0</button></td>
-    <td></td>
-    <td></td>
-  </tr>
-</table> 
+<div class="calc">
+  <div class="row">
+    <div class="col-4 padding-10 full-width">
+      <input class="full-width" class="form-control" [ngModel]="display" disabled>
+    </div>    
+  </div>
+  <div class="row">
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="reset()">C</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="minus()">-</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="add()">+</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('7')">7</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('8')">8</button>
+    </div>
+    <div class="col-4 padding-10 ">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('9')">9</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('4')">4</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('5')">5</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('6')">6</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('1')">1</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('2')">2</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('3')">3</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('0')">0</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="addNumber('.')">.</button>
+    </div>
+    <div class="col-4 padding-10">
+      <button type="button" class="btn btn-primary btn-block full-width" (click)="calc()">=</button>
+    </div>
+  </div>
+</div>
